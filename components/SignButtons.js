@@ -13,16 +13,17 @@ function SignButtons({isSignUp, onSubmit, loading}) {
     if (isSignUp) {
       navigation.goBack();
     } else {
-      navigation.push('SignIn',{isSignUp: true});
+      navigation.push('SignIn', {isSignUp: true});
     }
-    if (loading) {
-        return (
-          <View style={styles.spinnerWrapper}>
-            <ActivityIndicator size={32} color="#6200ee" />
-          </View>
-       );
-      }
   };
+
+  if (loading) {
+    return (
+      <View style={styles.spinnerWrapper}>
+        <ActivityIndicator size={32} color="#6200ee" />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.buttons}>
@@ -37,15 +38,15 @@ function SignButtons({isSignUp, onSubmit, loading}) {
 }
 
 const styles = StyleSheet.create({
-    spinnerWrapper: {
-      marginTop: 64,
-      height: 104,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    buttons: {
-      marginTop: 64,
-    },
+  spinnerWrapper: {
+    marginTop: 64,
+    height: 104,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttons: {
+    marginTop: 64,
+  },
 });
 
 export default SignButtons;

@@ -10,19 +10,19 @@ function BorderedInput({hasMarginBottom, ...rest}, ref) {
     />
   );
 }
-  
-  const styles = StyleSheet.create({
-    input: {
-      borderColor: '#bdbdbd',
-      borderWidth: 1,
-      paddingHorizontal: 16,
-      borderRadius: 4,
-      height: 48,
-      backgroundColor: 'white',
-    },
-    margin: {
-      marginBottom: 16,
-    },
+
+const styles = StyleSheet.create({
+  input: {
+    borderColor: '#bdbdbd',
+    borderWidth: 1,
+    paddingHorizontal: 16,
+    borderRadius: 4,
+    height: 48,
+    backgroundColor: 'white',
+  },
+  margin: {
+    marginBottom: 16,
+  },
 });
-  
+
 export default React.forwardRef(BorderedInput);
